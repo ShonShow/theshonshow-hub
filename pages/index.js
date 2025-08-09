@@ -125,4 +125,40 @@ export default function Home() {
               <a href={`mailto:${s.contact.email}`} style={{display:"inline-flex", padding:"12px 16px", borderRadius:999, fontWeight:700, background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.12)", color:"#fff", textDecoration:"none"}}>✉ {s.contact.email}</a>
             </div>
           </div>
-          <form style={{background:"rgba(23,23,23,.7)", borderRadius:16, padding:24
+          <form style={{background:"rgba(23,23,23,.7)", borderRadius:16, padding:24, boxShadow:"inset 0 0 0 1px rgba(255,255,255,.06)"}}>
+            <div style={{display:"grid", gridTemplateColumns:"1fr", gap:12}}>
+              <div>
+                <label style={{fontSize:14, color:"#bbb"}}>שם מלא</label>
+                <input style={{width:"100%", marginTop:6, padding:"10px 12px", borderRadius:12, background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.12)", color:"#fff"}} placeholder="שם" />
+              </div>
+              <div>
+                <label style={{fontSize:14, color:"#bbb"}}>אימייל</label>
+                <input type="email" style={{width:"100%", marginTop:6, padding:"10px 12px", borderRadius:12, background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.12)", color:"#fff"}} placeholder="you@email.com" />
+              </div>
+              <div>
+                <label style={{fontSize:14, color:"#bbb"}}>איך אפשר לעזור?</label>
+                <textarea style={{width:"100%", marginTop:6, padding:"10px 12px", minHeight:120, borderRadius:12, background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.12)", color:"#fff"}} placeholder="ספרו בכמה מילים על הבקשה" />
+              </div>
+            </div>
+            <button type="button" style={{marginTop:12, width:"100%", display:"inline-flex", justifyContent:"center", padding:"12px 16px", borderRadius:12, background:"#FEBF00", color:"#111", fontWeight:700}}>שליחה</button>
+          </form>
+        </div>
+      </section>
+
+      <footer style={{borderTop:"1px solid rgba(255,255,255,.06)", padding:"24px 0"}}>
+        <div style={{maxWidth:1200, margin:"0 auto", padding:"0 16px", display:"flex", gap:16, alignItems:"center", justifyContent:"space-between", flexWrap:"wrap"}}>
+          <div style={{color:"#aaa"}}>© {new Date().getFullYear()} The Shon Show — כל הזכויות שמורות</div>
+          <div style={{display:"flex", gap:16, opacity:.9}}>
+            <a href={s.social.youtube} target="_blank" rel="noreferrer">YouTube</a>
+            <a href={s.social.instagram} target="_blank" rel="noreferrer">Instagram</a>
+            <a href={s.social.tiktok} target="_blank" rel="noreferrer">TikTok</a>
+          </div>
+        </div>
+      </footer>
+
+      <script
+        dangerouslySetInnerHTML={{ __html: `setTimeout(function(){ var s=document.getElementById('splash'); if(s) s.style.display='none'; }, 2200);` }}
+      />
+    </main>
+  );
+}
