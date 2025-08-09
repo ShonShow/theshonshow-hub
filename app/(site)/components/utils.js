@@ -1,1 +1,0 @@
-export function ytToEmbed(url){try{if(!url)return"";const u=new URL(url);if(u.hostname.includes("youtu.be"))return`https://www.youtube.com/embed/${u.pathname.slice(1)}`;const id=u.searchParams.get("v");return id?`https://www.youtube.com/embed/${id}`:""}catch{return""}}
